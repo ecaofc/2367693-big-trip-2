@@ -170,7 +170,7 @@ export default class EventFormView extends AbstractStatefulView {
     super();
     this._state = {
       ...structuredClone(event),
-      id: event.id // ✅ сохраняем id
+      id: event.id
     };
     this.#mode = mode;
     this.#offersByType = offers;

@@ -2,7 +2,7 @@ import { render, replace } from '../framework/render.js';
 import EventPointView from '../view/event-point-view.js';
 import EventFormView from '../view/event-form-view.js';
 import { EventFormMode } from '../const.js';
-import { adaptToServer } from '../adapters/event-adapter.js'; // ✅ добавлено
+import { adaptToServer } from '../adapters/event-adapter.js';
 
 export default class PointPresenter {
   #point = null;
@@ -110,7 +110,7 @@ export default class PointPresenter {
   };
 
   #handleFormSubmit = (formState) => {
-    const updatedPoint = adaptToServer(formState); // ✅ адаптация
+    const updatedPoint = adaptToServer(formState);
     this.#changeData(updatedPoint);
     this.#closeForm();
   };
